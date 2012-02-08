@@ -11,6 +11,10 @@
 #define TAILLEBUF 20
 
 int main(int argc, char** argv) {
+	if(argc != 3) {
+		printf("Wrong number of argument\n");
+		return -1;
+	}
      // identifiant de la machine serveur
      struct hostent *serveur_host;
      // adresse de la socket coté serveur
@@ -34,7 +38,7 @@ int main(int argc, char** argv) {
           exit(1);
      }
      // récupération identifiant du serveur
-     serveur_host = gethostbyname("localhost");
+     serveur_host = gethostbyname(argv[1]);
      if (serveur_host==NULL) {
           perror("erreur adresse serveur");
           exit(1);
@@ -42,7 +46,7 @@ int main(int argc, char** argv) {
      // création adresse socket destinatrice
      bzero(&addr_serveur, sizeof(struct sockaddr_in));
      addr_serveur.sin_family = AF_INET;
-     addr_serveur.sin_port = htons(4000);
+     addr_serveur.sin_port = htons(atoi(argv[2]));
      memcpy(&addr_serveur.sin_addr.s_addr,
             serveur_host -> h_addr, serveur_host -> h_length);
      // on envoie le message "bonjour" au serveur
@@ -66,4 +70,5 @@ int main(int argc, char** argv) {
      printf("reponse recue du serveur : %s\n",reponse);
      // on ferme la socket
      close(sock);
+	return 0;
 }
