@@ -11,6 +11,10 @@
 #define TAILLEBUF 20
 
 int main(int argc, char** argv) {
+	if(argc =! 2) {
+		printf("Wrong number of argument\n");
+		return -1;
+	}
      // adresse de la socket locale
      static struct sockaddr_in addr_local;
      // adresse de la socket coté serveur
@@ -38,7 +42,7 @@ int main(int argc, char** argv) {
      // liaison de la socket sur le port local 4000
      bzero(&addr_local, sizeof(struct sockaddr_in));
      addr_local.sin_family = AF_INET;
-     addr_local.sin_port = htons(4000);
+     addr_local.sin_port = htons(atoi(argv[1]));
      addr_local.sin_addr.s_addr=htonl(INADDR_ANY);
      if( bind(sock, (struct sockaddr*)&addr_local,
                sizeof(addr_local))== -1 ) {
@@ -74,4 +78,5 @@ int main(int argc, char** argv) {
      }
      // fermeture la socket
      close(sock);
+	return 0;
 }
