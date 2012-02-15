@@ -1,0 +1,67 @@
+<html><head>
+
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <meta name="Author" content="Eric Cariou">
+   <meta name="Keywords" content="Eric Cariou sockets UDP ">
+   <link rel="stylesheet" href="Sujet_tp2_fichiers/style.css" type="text/css"> 
+   <style>
+   ol > li { padding-bottom : 4mm; }
+   </style>
+   <title>TP 2 : premier programme avec les sockets TCP</title>
+</head><body bgcolor="#ffffff">
+
+<h2>Premier programme avec les sockets TCP : version C</h2>
+
+<ol>
+
+<li>Copier puis tester le code des parties client et serveur de
+l'exemple du cours sur les sockets TCP.<br><br>
+
+Comme pour le TP 1 sur UDP, réaliser ces 2 programmes afin de
+pouvoir préciser le nom en paramètre du lancement des
+programmes. Le serveur et le client devront pouvoir être lancés
+comme suit :
+
+<p class="code">
+$ serveur <i>port_local_ecoute</i><br>
+$ client <i>nom_serveur</i> <i>port_serveur</i>
+
+</p> </li>
+
+<li> Définir une fonction à la signature suivante pour créer les sockets TCP :
+<p class="code">
+int creerSocketTCP(int port)
+</p>
+Cette fonction crée une socket TCP et la lie (via un bind) au port
+précisé en paramètre. Si on ne veut pas la lier à un port
+précis mais laisser le système le déterminer, on passera la
+valeur 0 en paramètre. La valeur retournée est le descripteur de
+la socket ou -1 en cas d'erreur.<br> Placer cette fonction dans un
+fichier à part (le même que celui contenant la fonction de
+création de socket UDP du TP 1) et modifier vos 2 programmes pour
+l'utiliser.
+</li>
+
+<li>
+Réaliser un transfert de fichier du client vers le serveur.
+</li>
+</ol>
+
+<h2>Premier programme avec les sockets TCP : version Java</h2>
+
+<p>Copier puis tester le code des parties client et serveur de
+l'exemple du cours sur les sockets TCP. Rajouter pour cela notamment
+la gestion des exceptions qui n'était pas présente.</p>
+
+<p>Modifier le code pour, comme pour la partie C, ne plus avoir à
+préciser le nom et le port du serveur en dur dans le code. Le
+serveur et le client devront pouvoir être lancés comme suit
+:</p>
+
+<p class="code">
+$ java Serveur <i>port_local_ecoute</i><br>
+$ java Client <i>nom_serveur</i> <i>port_serveur</i>
+</p>
+
+<p></p>
+</body></html>
