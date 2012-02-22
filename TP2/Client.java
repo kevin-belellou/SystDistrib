@@ -14,7 +14,6 @@ public class Client
                // ouverture de connexion avec le serveur sur le port 7777
                Socket socket = new Socket(adr, 7777);
 
-
                // construction de flux objets à partir des flux de la socket
                ObjectOutputStream output = new ObjectOutputStream(socket.getOutputStream());
                ObjectInputStream input = new ObjectInputStream(socket.getInputStream());
