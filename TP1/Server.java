@@ -25,7 +25,6 @@ public class Server
                // récupération et affichage des données (une chaîne de caractères)
                String chaine = new String(packet.getData(), 0, packet.getLength());
                System.out.println(" recu : "+chaine);
-
           }
           catch (Exception e)
           {
