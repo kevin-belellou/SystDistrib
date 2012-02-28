@@ -4,11 +4,28 @@ import java.io.*;
 public class Server
 {
      public static void main(String argv[])
-     {	
+     {
+          if (argv.length != 1)
+          {
+               System.err.println("Il faut 1 argument exactement : port d'ecoute");
+               System.exit(-1);
+          }
+
+          int port = 0;
+          try
+          {
+               port = Integer.parseInt(argv[0]);
+          }
+          catch (Exception e)
+          {
+               System.err.println("L'argument doit etre un nombre (port)");
+               System.exit(-1);
+          }
+
           try
 	     {
                // serveur positionne sa socket d'écoute sur le port local 7777
-               ServerSocket serverSocket = new ServerSocket(7777);
+               ServerSocket serverSocket = new ServerSocket(port);
 
                // se met en attente de connexion de la part d'un client distant
                Socket socket = serverSocket.accept();
