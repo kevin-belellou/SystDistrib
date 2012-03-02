@@ -1,18 +1,8 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
-#include <sys/types.h>
-#include <netdb.h>
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <errno.h>
-
 #include "../functions.h"
 
 #define TAILLEBUF 20
 
-int main(int argc, char** argv)
+int main(int argc, char* argv[])
 {
 	if(argc != 3)
      {
@@ -83,7 +73,7 @@ int main(int argc, char** argv)
           exit(1);
      }
 
-     printf("paquet envoyé, nb_octets = %d\n",nb_octets);
+     printf("paquet envoyé, nb_octets = %d\n", nb_octets);
 
      // on attend la réponse du serveur
      nb_octets = recvfrom(sock, buffer, TAILLEBUF, 0, (struct sockaddr*)&addr_serveur, &lg);
@@ -95,7 +85,7 @@ int main(int argc, char** argv)
 
      reponse = (char *)malloc(nb_octets * sizeof(char));
      memcpy(reponse, buffer, nb_octets);
-     printf("reponse recue du serveur : %s\n",reponse);
+     printf("reponse recue du serveur : %s\n", reponse);
 
      // on ferme la socket
      close(sock);
