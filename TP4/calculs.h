@@ -1,7 +1,8 @@
-struct res_analyse_donnees {
-  float moy;
-  int max;
-  int min;
+struct res_analyse_donnees
+{
+     float moy;
+     int max;
+     int min;
 }
 
 long factoriel(int nb);

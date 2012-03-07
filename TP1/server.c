@@ -4,11 +4,11 @@
 
 int main(int argc, char* argv[])
 {
-	if(argc != 2)
+     if(argc != 2)
      {
-		printf("Wrong number of argument\n");
-		return -1;
-	}
+          printf("Wrong number of argument\n");
+          return -1;
+     }
 
      // adresse de la socket locale
      static struct sockaddr_in addr_local;
@@ -78,5 +78,5 @@ int main(int argc, char* argv[])
      // fermeture la socket
      close(sock);
 
-	return 0;
+     return 0;
 }

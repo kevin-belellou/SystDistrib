@@ -6,9 +6,9 @@ int main(int argc, char* argv[])
 {
      if(argc != 3)
      {
-		printf("Wrong number of argument\n");
-		return -1;
-	}
+          printf("Wrong number of argument\n");
+          return -1;
+     }
 
      // identification socket d'écoute du serveur
      static struct sockaddr_in addr_serveur;
@@ -75,4 +75,6 @@ int main(int argc, char* argv[])
 
      // on ferme la socket
      close(sock);
+
+     return 0;
 }

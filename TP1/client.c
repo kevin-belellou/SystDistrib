@@ -4,11 +4,11 @@
 
 int main(int argc, char* argv[])
 {
-	if(argc != 3)
+     if(argc != 3)
      {
-		printf("Wrong number of argument\n");
-		return -1;
-	}
+          printf("Wrong number of argument\n");
+          return -1;
+     }
 
      // identifiant de la machine serveur
      struct hostent *serveur_host;
@@ -90,5 +90,5 @@ int main(int argc, char* argv[])
      // on ferme la socket
      close(sock);
 
-	return 0;
+     return 0;
 }

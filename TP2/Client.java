@@ -24,7 +24,7 @@ public class Client
           }
 
           try
-	     {
+          {
                // adresse IP du serveur
                InetAddress adr = InetAddress.getByName(adresse);
 
@@ -47,6 +47,6 @@ public class Client
           catch (Exception e)
           {
                System.err.println(e);
-	     }
+          }
      }
 }

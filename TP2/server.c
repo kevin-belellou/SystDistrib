@@ -6,9 +6,9 @@ int main(int argc, char* argv[])
 {
      if(argc != 2)
      {
-		printf("Wrong number of argument\n");
-		return -1;
-	}
+          printf("Wrong number of argument\n");
+          return -1;
+     }
 
      // adresse socket coté client
      static struct sockaddr_in addr_client;
@@ -91,4 +91,6 @@ int main(int argc, char* argv[])
      // on ferme les sockets
      close(socket_service);
      close(socket_ecoute);
+
+     return 0;
 }

@@ -23,7 +23,7 @@ public class Client
           }
 
           try
-	     {
+          {
                InetAddress adr;
                DatagramPacket packet;
                DatagramSocket socket;
@@ -46,6 +46,6 @@ public class Client
           catch (Exception e)
           {
                System.err.println(e);
-	     }
+          }
      }
 }

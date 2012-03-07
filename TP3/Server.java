@@ -22,7 +22,7 @@ public class Server
           }
 
           try
-	     {
+          {
                DatagramSocket socket;
                DatagramPacket packet;
 
@@ -54,6 +54,6 @@ public class Server
           catch (Exception e)
           {
                System.err.println(e);
-	     }
+          }
      }
 }

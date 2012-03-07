@@ -23,7 +23,7 @@ public class Server
           }
 
           try
-	     {
+          {
                // serveur positionne sa socket d'écoute sur le port local 7777
                ServerSocket serverSocket = new ServerSocket(port);
 
@@ -47,6 +47,6 @@ public class Server
           catch (Exception e)
           {
                System.err.println(e);
-	     }
+          }
      }
 }
