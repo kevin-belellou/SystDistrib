@@ -26,4 +26,9 @@ G&eacute;rer l'interop&eacute;rabilit&eacute; logicielle du client UDP en C et d
 ## TP4 : Serveur TCP multi-clients ##
 
 Cr&eacute;ation d'un serveur utilisant des sockets TCP pour r&eacute;pondre aux requ&ecirc;tes de multiples clients  
-Langage : C
+Langage : C  
+
+## Projet : Simulation d'un syst&egrave;me de gestion de temp&eacute;rature ##
+
+Cr&eacute;ation d'un syst&egrave;me de gestion de la temp&eacute;rature d'une maison  
+Langages : C et Java  
