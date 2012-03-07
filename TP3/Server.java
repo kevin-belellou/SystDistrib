@@ -30,7 +30,7 @@ public class Server
                socket = new DatagramSocket(port);
 
                // tableau de 15 octets qui contiendra les données reçues
-               byte[] data = new byte[15];
+               byte[] data = new byte[50];
 
                // création d'un paquet en utilisant le tableau d'octets
                packet = new DatagramPacket(data, data.length);
@@ -39,9 +39,17 @@ public class Server
                // packet et ses données dans data.
                socket.receive(packet);
 
-               // récupération et affichage des données (une chaîne de caractères)
+               // récupération et affichage des données
                String chaine = new String(packet.getData(), 0, packet.getLength());
+               InetAddress adrClient = packet.getAddress();
+               Integer portClient = new Integer(packet.getPort());
+
                System.out.println("recu : " + chaine);
+               System.out.println("depuis : " + adrClient.getHostAddress() + ":" + portClient);
+
+               data = (new String("Ah ouais toi aussi ?")).getBytes();
+               packet = new DatagramPacket(data, data.length, adrClient, portClient);
+               socket.send(packet);
           }
           catch (Exception e)
           {
