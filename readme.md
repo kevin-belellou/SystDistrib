@@ -13,9 +13,15 @@ Langages : C et Java
 Cr&eacute;ation d'un syst&egrave;me client-serveur utilisant des sockets TCP  
 Langages : C et Java  
 
-## TP3 : ? ##
+## TP3 : Interop&eacute;rabilit&eacute; mat&eacute;rielle et logicielle ##
+
+### Interop&eacute;rabilit&eacute; materielle ###
 
 &Agrave; venir  
+
+### Interop&eacute;rabilit&eacute; logicielle ###
+
+G&eacute;rer l'interop&eacute;rabilit&eacute; logicielle du client UDP en C et du serveur UDP en Java  
 
 ## TP4 : Serveur TCP multi-clients ##
 
