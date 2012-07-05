@@ -20,7 +20,7 @@ int main(int argc, char* argv[])
      int sock;
 
      // Création de la socket et bind via functions.h
-     sock = creerSocketUDP(atoi(argv[2]));
+     sock = creerSocketTCPA(atoi(argv[2]), argv[1]);
      if (sock == -1)
      {
           printf("fuck\n");
